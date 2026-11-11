@@ -8,7 +8,7 @@ const fr = {
   },
   nav: { home: "Accueil", features: "Fonctionnalités", pricing: "Tarifs", faq: "FAQ", blog: "Blog", contact: "Contact", download: "Télécharger", trial: "Essai gratuit", menu: "Menu" },
   hero: {
-    badge: "Logiciel de pointage pour l'Algérie",
+    badge: "Attendify, de vraies solutions pour de vrais problèmes de présence",
     title: "Le pointage et la gestion des présences, enfin simples",
     sub: "Une borne de pointage à l'entrée, une application de gestion au bureau RH : deux applications Windows, une seule vision claire de votre équipe.",
     cta1: "Essai gratuit", cta2: "Voir la démo",
@@ -88,7 +88,7 @@ const en: Dict = {
   meta: { title: "Attendify – Time & attendance software", description: "In/out punches, absences, delays and PDF reports: Attendify makes attendance management simple in Algeria." },
   nav: { home: "Home", features: "Features", pricing: "Pricing", faq: "FAQ", blog: "Blog", contact: "Contact", download: "Download", trial: "Free trial", menu: "Menu" },
   hero: {
-    badge: "Time & attendance software for Algeria",
+    badge: "Attendify, real solutions for real life attendance problems",
     title: "Time tracking and attendance, finally simple",
     sub: "A check-in kiosk at the door, a management app in the HR office: two Windows apps, one clear view of your team.",
     cta1: "Free trial", cta2: "See the demo", proof: "companies already trust us",
@@ -162,7 +162,7 @@ const ar: Dict = {
   meta: { title: "Attendify – برنامج تسيير الحضور والغياب", description: "تسجيل الدخول والخروج والغيابات والتأخرات وتقارير PDF: Attendify يبسّط تسيير المواظبة في الجزائر." },
   nav: { home: "الرئيسية", features: "المزايا", pricing: "الأسعار", faq: "الأسئلة", blog: "المدونة", contact: "اتصل بنا", download: "تحميل", trial: "تجربة مجانية", menu: "القائمة" },
   hero: {
-    badge: "برنامج المواظبة للجزائر",
+    badge: "Attendify، حلول حقيقية لمشاكل الحضور الحقيقية",
     title: "تسجيل الحضور وتسيير الغيابات، أخيراً ببساطة",
     sub: "محطة تسجيل عند المدخل وتطبيق تسيير في مكتب الموارد البشرية: تطبيقان لويندوز ورؤية واحدة واضحة لفريقك.",
     cta1: "تجربة مجانية", cta2: "شاهد العرض", proof: "مؤسسة تثق بنا",

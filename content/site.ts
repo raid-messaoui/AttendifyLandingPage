@@ -1,11 +1,11 @@
 export const site = {
   name: "Attendify",
-  email: "contact@attendify.dz",
-  phones: ["+213 550 00 00 00", "+213 770 00 00 00"],
-  whatsapp: "213550000000",
-  address: { fr: "Alger, Algérie", en: "Algiers, Algeria", ar: "الجزائر العاصمة، الجزائر" },
+  email: "anissemessaoui2016@gmail.com",
+  phones: ["0797 05 75 98"],
+  whatsapp: "213797057598",
+  address: { fr: "Sétif, Algérie", en: "Setif, Algeria", ar: "سطيف، الجزائر" },
   customerCount: 120,
-  stats: { employees: 2500, punches: 2900000, satisfaction: 98 },
+  stats: { employees: 2500, punches: 2000000, satisfaction: 98 },
   clients: ["ceram", "elva", "royal", "sani"], // files in public/assets/logos
 };
 

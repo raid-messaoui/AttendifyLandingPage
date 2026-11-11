@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import type { Dict } from "@/content/dictionary";
-import { site } from "@/content/site";
 import { ease } from "./ui";
 
 export function Hero({ d, dir, lang }: { d: Dict; dir: number; lang: string }) {
@@ -19,9 +18,8 @@ export function Hero({ d, dir, lang }: { d: Dict; dir: number; lang: string }) {
           <motion.p {...stagger(2)} className="mt-5 max-w-xl text-lg text-ink-600">{h.sub}</motion.p>
           <motion.div {...stagger(3)} className="mt-8 flex flex-wrap gap-3">
             <a href={`/${lang}#contact`} className="btn-primary">{h.cta1}</a>
-            <a href={`/${lang}#demo`} className="btn-secondary">{h.cta2}</a>
+            <a href={`/${lang}#contact`} className="btn-secondary">{h.cta2}</a>
           </motion.div>
-          <motion.p {...stagger(4)} className="mt-6 text-sm text-ink-600"><strong className="text-ink-900">{site.customerCount}+</strong> {h.proof}</motion.p>
         </div>
 
         <motion.div initial={{ opacity: 0, x: 60 * dir }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease, delay: 0.3 }} className="mx-auto w-full max-w-2xl">

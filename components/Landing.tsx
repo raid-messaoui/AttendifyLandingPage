@@ -1,7 +1,7 @@
 "use client";
 import { MotionConfig, motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X, Plus, ChevronLeft, ChevronRight, Mail, Phone, MapPin, MessageCircle, Download, Monitor, Tablet, Check, Puzzle, Play, CheckCircle2 } from "lucide-react";
+import { Menu, X, Plus, ChevronLeft, ChevronRight, Mail, Phone, MapPin, MessageCircle, Monitor, Tablet, Check, Puzzle, CheckCircle2 } from "lucide-react";
 import type { Dict } from "@/content/dictionary";
 import { site, langs, type Lang } from "@/content/site";
 import { modules, moduleText, type Cat } from "@/content/features";
@@ -9,7 +9,7 @@ import { faqs } from "@/content/faq";
 import { Hero } from "./Hero";
 import { Icon, Reveal, SectionHeading, Counter, ease } from "./ui";
 
-const sections = ["features", "pricing", "faq", "blog", "contact"] as const;
+const sections = ["features", "pricing", "faq", "contact"] as const;
 
 /* The PNG has transparent padding around the mark; crop it so the logo fills its box. */
 function Logo({ size }: { size: number }) {
@@ -36,7 +36,7 @@ function Header({ d, lang }: { d: Dict; lang: Lang }) {
   useEffect(() => { document.body.style.overflow = open ? "hidden" : ""; }, [open]);
 
   const links: [string, string][] = [
-    ["home", d.nav.home], ["features", d.nav.features], ["pricing", d.nav.pricing], ["faq", d.nav.faq], ["blog", d.nav.blog], ["contact", d.nav.contact],
+    ["home", d.nav.home], ["features", d.nav.features], ["pricing", d.nav.pricing], ["faq", d.nav.faq], ["contact", d.nav.contact],
   ];
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "border-b border-line bg-white/80 shadow-sm backdrop-blur-lg" : "border-b border-transparent"}`}>
@@ -55,8 +55,7 @@ function Header({ d, lang }: { d: Dict; lang: Lang }) {
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
           <LangSwitch lang={lang} />
-          <a href={`/${lang}#contact`} className="btn-secondary !py-2 text-sm">{d.nav.download}</a>
-          <a href={`/${lang}#pricing`} className="btn-primary !py-2 text-sm">{d.nav.trial}</a>
+          <a href={`/${lang}#contact`} className="btn-primary !py-2 text-sm">{d.nav.trial}</a>
         </div>
         <button className="icon-box lg:hidden" aria-label={d.nav.menu} aria-expanded={open} onClick={() => setOpen(true)}><Menu size={22} /></button>
       </div>
@@ -69,7 +68,7 @@ function Header({ d, lang }: { d: Dict; lang: Lang }) {
             </nav>
             <div className="mt-auto space-y-4">
               <LangSwitch lang={lang} />
-              <a href={`/${lang}#pricing`} onClick={() => setOpen(false)} className="btn-primary w-full">{d.nav.trial}</a>
+              <a href={`/${lang}#contact`} onClick={() => setOpen(false)} className="btn-primary w-full">{d.nav.trial}</a>
             </div>
           </motion.div>
         )}
@@ -472,34 +471,6 @@ function Faq({ d, lang }: { d: Dict; lang: Lang }) {
   );
 }
 
-/* ------------------------------- Blog ------------------------------- */
-function Blog({ d, lang }: { d: Dict; lang: Lang }) {
-  const b = d.blog;
-  return (
-    <section id="blog" className="section bg-white">
-      <div className="container-x">
-        <SectionHeading title={b.title} />
-        <div className="grid gap-6 md:grid-cols-3">
-          {b.posts.map(([t, e, tag, date, min], i) => (
-            <Reveal key={t} delay={i * 0.06}>
-              <article className="card overflow-hidden transition hover:-translate-y-1 hover:shadow-lift">
-                <div className="h-40 bg-brand" style={{ backgroundImage: `linear-gradient(${90 + i * 25}deg,#23A6DE,#1279BE)` }} />
-                <div className="p-6">
-                  <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-600">{tag}</span>
-                  <h3 className="mt-3 text-lg font-semibold">{t}</h3>
-                  <p className="mt-1.5 text-sm text-ink-600">{e}</p>
-                  <div className="mt-4 text-xs text-ink-400">{date} · {min as number} {b.read}</div>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-10 text-center"><a href={`/${lang}#blog`} className="btn-secondary">{b.all}</a></div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------------------------- CTA + Contact ------------------------- */
 function Cta({ d, lang }: { d: Dict; lang: Lang }) {
   const c = d.cta;
@@ -531,40 +502,6 @@ function Cta({ d, lang }: { d: Dict; lang: Lang }) {
   );
 }
 
-/* ------------------------------- Demo video ------------------------- */
-const DEMO_ID = "EEuLkml12aA"; // https://youtu.be/EEuLkml12aA
-
-function Demo({ d }: { d: Dict }) {
-  const [play, setPlay] = useState(false);
-  return (
-    <section id="demo" className="section bg-white">
-      <div className="container-x max-w-4xl">
-        <SectionHeading title={d.demo.title} sub={d.demo.sub} />
-        <Reveal>
-          <div className="card relative aspect-video overflow-hidden bg-ink-900">
-            {play ? (
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src={`https://www.youtube-nocookie.com/embed/${DEMO_ID}?autoplay=1&rel=0`}
-                title="Attendify demo"
-                allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"
-                allowFullScreen
-              />
-            ) : (
-              <button onClick={() => setPlay(true)} className="group absolute inset-0 grid place-items-center" aria-label={d.demo.play}>
-                <img src={`https://i.ytimg.com/vi/${DEMO_ID}/maxresdefault.jpg`} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-                <span className="absolute inset-0 bg-ink-900/30 transition group-hover:bg-ink-900/10" />
-                <span className="relative grid h-20 w-20 place-items-center rounded-full bg-brand text-white shadow-lift transition group-hover:scale-110"><Play size={32} fill="currentColor" className="rtl:-scale-x-100" /></span>
-              </button>
-            )}
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
-
 function Contact({ d, lang }: { d: Dict; lang: Lang }) {
   const c = d.contact;
   const rows = [
@@ -584,7 +521,6 @@ function Contact({ d, lang }: { d: Dict; lang: Lang }) {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={`https://wa.me/${site.whatsapp}`} className="btn bg-success text-white"><MessageCircle size={18} />{c.whatsapp}</a>
-            <a href="#" className="btn-secondary"><Download size={18} />{c.download}</a>
           </div>
         </Reveal>
         <Reveal delay={0.1}>
@@ -619,8 +555,8 @@ function Footer({ d, lang }: { d: Dict; lang: Lang }) {
           <p className="mt-4 max-w-xs text-sm">{f.desc}</p>
           <div className="mt-5"><LangSwitch lang={lang} /></div>
         </div>
-        {col(f.product, [[d.nav.features, `/${lang}#features`], [d.nav.pricing, `/${lang}#pricing`], [d.nav.download, `/${lang}#contact`]])}
-        {col(f.resources, [[d.nav.blog, `/${lang}#blog`], [d.nav.faq, `/${lang}#faq`]])}
+        {col(f.product, [[d.nav.features, `/${lang}#features`], [d.nav.pricing, `/${lang}#pricing`]])}
+        {col(f.resources, [[d.nav.faq, `/${lang}#faq`]])}
         {col(f.company, [[d.nav.contact, `/${lang}#contact`], [f.partners, "#"]])}
         {col(f.legal, [[f.privacy, "#"], [f.terms, "#"]])}
       </div>
@@ -638,7 +574,6 @@ export function Landing({ lang, d }: { lang: Lang; d: Dict }) {
       <main id="main">
         <Hero d={d} dir={dir} lang={lang} />
         <Trust d={d} />
-        <Demo d={d} />
         <How d={d} />
         <Features d={d} lang={lang} />
         <Spotlights d={d} />
@@ -647,7 +582,6 @@ export function Landing({ lang, d }: { lang: Lang; d: Dict }) {
         <Pricing d={d} lang={lang} />
         <Testimonials d={d} />
         <Faq d={d} lang={lang} />
-        <Blog d={d} lang={lang} />
         <Cta d={d} lang={lang} />
         <Contact d={d} lang={lang} />
       </main>

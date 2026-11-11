@@ -10,7 +10,7 @@ const fr = {
   hero: {
     badge: "Attendify, de vraies solutions pour de vrais problèmes de présence",
     title: "Le pointage et la gestion des présences, enfin simples",
-    sub: "Une borne de pointage à l'entrée, une application de gestion au bureau RH : deux applications Windows, une seule vision claire de votre équipe.",
+    sub: "Une pointeuse à l'entrée, une application de gestion au bureau RH : deux applications Windows, une seule vision claire de votre équipe.",
     cta1: "Essai gratuit", cta2: "Voir la démo",
     proof: "entreprises nous font déjà confiance",
     kiosk: "Entrée enregistrée", employee: "Amine B.", live: "En direct",
@@ -18,14 +18,14 @@ const fr = {
     in: "Entrée", out: "Sortie",
   },
   trust: { employees: "employés gérés", punches: "pointages traités", satisfaction: "de satisfaction du support" },
-  demo: { title: "Voyez Attendify en action", sub: "Une démo vidéo de l'application de gestion et de la borne de pointage.", play: "Lire la vidéo" },
+  demo: { title: "Voyez Attendify en action", sub: "Une démo vidéo de l'application de gestion et de la pointeuse.", play: "Lire la vidéo" },
   how: {
     title: "Pas seulement une application, un écosystème",
-    sub: "Les employés pointent sur la borne, les RH pilotent tout depuis le bureau.",
+    sub: "Les employés pointent sur la pointeuse, les RH pilotent tout depuis le bureau.",
     kioskT: "Application de pointage", kioskD: "Installée sur une tablette à la porte. Les employés enregistrent leur entrée et sortie et reçoivent les convocations.",
     mgmtT: "Application de gestion", mgmtD: "Le poste du service RH : pointages, absences, appels, statistiques, rapports et droits d'accès.",
     custT: "Solutions sur mesure", custD: "Paie, pointage sur des sites distants (usine dans une ville, administration dans une autre) et modules adaptés à votre organisation.",
-    steps: [["Installez la borne", "Installez l'application de pointage sur une tablette Windows."], ["Enregistrez vos employés", "Créez les fiches, groupes, départements et plannings."], ["Suivez tout en direct", "Les pointages remontent aussitôt au tableau de bord."]],
+    steps: [["Installez la pointeuse", "Installez l'application de pointage sur une tablette Windows."], ["Enregistrez vos employés", "Créez les fiches, groupes, départements et plannings."], ["Suivez tout en direct", "Les pointages remontent aussitôt au tableau de bord."]],
   },
   features: {
     title: "15 modules pour tout piloter", sub: "Filtrez par catégorie et découvrez ce que fait chaque module.",
@@ -34,14 +34,14 @@ const fr = {
   },
   spot: {
     callsT: "Un système d'appels qui atteint vraiment vos employés", callsB: ["L'administration envoie une convocation", "Elle s'affiche au prochain pointage", "L'employé répond aux questionnaires"],
-    alertsT: "Des alertes intelligentes, sans surveillance manuelle", alertsB: ["Pointage irrégulier détecté", "Travail hors planning", "Temps supplémentaire", "Appel vu ou non vu"],
-    alertCards: [["Pointage irrégulier", "Sortie sans entrée – K. Meziane", "danger"], ["Hors planning", "Travail samedi – S. Haddad", "warning"], ["Temps supplémentaire", "+1h20 – N. Belkacem", "success"], ["Appel non vu", "Convocation – R. Khelifi", "warning"]],
-    statsT: "Des statistiques claires sur les absences", statsB: ["Absences justifiées et non justifiées", "Filtres par groupe, département, fonction", "Sélection personnalisée des employés"],
-    group: "Groupe", dept: "Département", func: "Fonction", custom: "Sélection libre", just: "Justifiées", unjust: "Non justifiées",
+    alertsT: "Des alertes intelligentes, sans surveillance manuelle", alertsB: ["Pointage irrégulier détecté", "Travail hors planning", "Heures supplémentaires", "Appel vu ou non vu"],
+    alertCards: [["Pointage irrégulier", "Sortie sans entrée – K. Meziane", "danger"], ["Hors planning", "Travail samedi – S. Haddad", "warning"], ["Heures supplémentaires", "+1h20 – N. Belkacem", "success"], ["Appel non vu", "Convocation – R. Khelifi", "warning"]],
+    statsT: "Des statistiques claires sur les absences", statsB: ["Absences justifiées et injustifiées", "Filtres par groupe, département, fonction", "Sélection personnalisée des employés"],
+    group: "Groupe", dept: "Département", func: "Fonction", custom: "Sélection libre", just: "Justifiées", unjust: "Injustifiées",
   },
   reports: {
     title: "7 rapports PDF et un éditeur de badges", sub: "Exportez en un clic, ou importez votre propre modèle PDF et placez vous-même les champs de données par glisser-déposer.",
-    list: ["Appels", "Questionnaires", "Absences justifiées / non justifiées", "Heures sup. / manquantes", "Jours de travail supplémentaires", "Retards", "Autorisations d'entrée/sortie"],
+    list: ["Appels", "Questionnaires", "Absences justifiées / injustifiées", "Heures supplémentaires / manquantes", "Jours de travail supplémentaires", "Retards", "Autorisations d'entrée/sortie"],
     tplT: "Votre modèle PDF", tplD: "Importez votre modèle et placez chaque champ où vous le souhaitez.", tplFields: ["Nom", "Département", "Date", "Retards"], badgeT: "Éditeur de badges", badgeD: "Glissez les champs sur le badge.", fields: ["Photo", "Nom", "Fonction", "Code-barres"],
   },
   security: {
@@ -61,7 +61,7 @@ const fr = {
   },
   testi: {
     title: "Ils ont simplifié leurs présences",
-    items: [["Attendify nous a fait gagner des heures de saisie chaque semaine.", "Nadia B.", "Responsable RH", "Atlas BTP", "Industrie"], ["Les retards sont enfin visibles et justifiés correctement.", "Karim M.", "Gérant", "Medina Retail", "Commerce"], ["Les convocations sur la borne sont très pratiques pour l'administration.", "Samia H.", "Directrice administrative", "Wilaya Services", "Administration"]],
+    items: [["Attendify nous a fait gagner des heures de saisie chaque semaine.", "Nadia B.", "Responsable RH", "Atlas BTP", "Industrie"], ["Les retards sont enfin visibles et justifiés correctement.", "Karim M.", "Gérant", "Medina Retail", "Commerce"], ["Les convocations sur la pointeuse sont très pratiques pour l'administration.", "Samia H.", "Directrice administrative", "Wilaya Services", "Administration"]],
   },
   faq: { title: "Questions fréquentes" },
   blog: {
@@ -85,7 +85,7 @@ type Dict = typeof fr;
 
 const en: Dict = {
   dir: "ltr",
-  meta: { title: "Attendify – Time & attendance software", description: "In/out punches, absences, delays and PDF reports: Attendify makes attendance management simple in Algeria." },
+  meta: { title: "Attendify – Time & attendance software", description: "In/out punches, absences, late arrivals and PDF reports: Attendify makes attendance management simple in Algeria." },
   nav: { home: "Home", features: "Features", pricing: "Pricing", faq: "FAQ", blog: "Blog", contact: "Contact", download: "Download", trial: "Free trial", menu: "Menu" },
   hero: {
     badge: "Attendify, real solutions for real life attendance problems",
@@ -99,26 +99,26 @@ const en: Dict = {
   demo: { title: "See Attendify in action", sub: "A video demo of the management app and the check-in kiosk.", play: "Play video" },
   how: {
     title: "Not just an app, it's an ecosystem", sub: "Employees punch at the kiosk, HR runs everything from the office.",
-    kioskT: "Check-in app", kioskD: "Installed on a tablet at the door. Employees clock in and out and receive summons.",
+    kioskT: "Check-in app", kioskD: "Installed on a tablet at the door. Employees clock in and out and receive calls.",
     mgmtT: "Management app", mgmtD: "The HR workstation: punches, absences, calls, statistics, reports and access rights.",
     custT: "Tailor-made solutions", custD: "Payroll, check-in for remote sites (factory in one city, administration in another) and modules adapted to your organization.",
     steps: [["Install the kiosk", "Install the check-in app on a Windows tablet."], ["Register employees", "Create profiles, groups, departments and schedules."], ["Follow it live", "Punches reach the dashboard instantly."]],
   },
   features: {
     title: "15 modules to run it all", sub: "Filter by category and see what each module does.", all: "All", more: "Learn more", close: "Close",
-    cats: { punch: "Punching", people: "Employees", calls: "Calls & questionnaires", plan: "Schedules & absences", stats: "Statistics & alerts", reports: "Reports & badges", admin: "Admin & security" },
+    cats: { punch: "Attendance", people: "Employees", calls: "Calls & questionnaires", plan: "Schedules & absences", stats: "Statistics & alerts", reports: "Reports & badges", admin: "Admin & security" },
   },
   spot: {
-    callsT: "A call system that actually reaches employees", callsB: ["Admin sends a summons", "It appears at the next punch", "Employee answers questionnaires"],
-    alertsT: "Smart alerts, no manual monitoring", alertsB: ["Irregular punch detected", "Off-schedule work", "Extra time", "Call seen or not seen"],
-    alertCards: [["Irregular punch", "Out without in – K. Meziane", "danger"], ["Off schedule", "Saturday work – S. Haddad", "warning"], ["Extra time", "+1h20 – N. Belkacem", "success"], ["Call not seen", "Summons – R. Khelifi", "warning"]],
-    statsT: "Clear absence statistics", statsB: ["Justified and unjustified absences", "Filters by group, department, function", "Custom employee selection"],
-    group: "Group", dept: "Department", func: "Function", custom: "Custom selection", just: "Justified", unjust: "Unjustified",
+    callsT: "A call system that actually reaches employees", callsB: ["Admin sends a call", "It appears at the next punch", "Employee answers questionnaires"],
+    alertsT: "Smart alerts, no manual monitoring", alertsB: ["Irregular punch detected", "Off-schedule work", "Overtime", "Call seen or not seen"],
+    alertCards: [["Irregular punch", "Out without in – K. Meziane", "danger"], ["Off schedule", "Saturday work – S. Haddad", "warning"], ["Overtime", "+1h20 – N. Belkacem", "success"], ["Call not seen", "Call – R. Khelifi", "warning"]],
+    statsT: "Clear absence statistics", statsB: ["Excused and unexcused absences", "Filters by group, department, job title", "Custom employee selection"],
+    group: "Group", dept: "Department", func: "Job title", custom: "Custom selection", just: "Excused", unjust: "Unexcused",
   },
   reports: {
     title: "7 PDF reports and a badge designer", sub: "Export in one click, or upload your own PDF template and drag and drop the data fields exactly where you want them.",
-    list: ["Calls", "Questionnaires", "Justified / unjustified absences", "Overtime / short time", "Extra work days", "Delays", "In/out authorizations"],
-    tplT: "Your PDF template", tplD: "Upload your template and place each field where you want it.", tplFields: ["Name", "Department", "Date", "Delays"], badgeT: "Badge designer", badgeD: "Drag fields onto the badge.", fields: ["Photo", "Name", "Function", "Barcode"],
+    list: ["Calls", "Questionnaires", "Excused / unexcused absences", "Overtime / undertime", "Additional days worked", "Late arrivals", "Entry / exit permits"],
+    tplT: "Your PDF template", tplD: "Upload your template and place each field where you want it.", tplFields: ["Name", "Department", "Date", "Late arrivals"], badgeT: "Badge designer", badgeD: "Drag fields onto the badge.", fields: ["Photo", "Name", "Job title", "Barcode"],
   },
   security: {
     title: "Security and traceability", sub: "Every action is logged, every right is controlled.",
@@ -137,7 +137,7 @@ const en: Dict = {
   },
   testi: {
     title: "They simplified attendance",
-    items: [["Attendify saves us hours of data entry every week.", "Nadia B.", "HR Manager", "Atlas BTP", "Industry"], ["Delays are finally visible and properly justified.", "Karim M.", "Owner", "Medina Retail", "Retail"], ["Summons on the kiosk are very handy for administration.", "Samia H.", "Admin Director", "Wilaya Services", "Administration"]],
+    items: [["Attendify saves us hours of data entry every week.", "Nadia B.", "HR Manager", "Atlas BTP", "Industry"], ["Late arrivals are finally visible and properly justified.", "Karim M.", "Owner", "Medina Retail", "Retail"], ["Calls on the kiosk are very handy for administration.", "Samia H.", "Admin Director", "Wilaya Services", "Administration"]],
   },
   faq: { title: "Frequently asked questions" },
   blog: {
@@ -164,35 +164,35 @@ const ar: Dict = {
   hero: {
     badge: "Attendify، حلول حقيقية لمشاكل الحضور الحقيقية",
     title: "تسجيل الحضور وتسيير الغيابات، أخيراً ببساطة",
-    sub: "محطة تسجيل عند المدخل وتطبيق تسيير في مكتب الموارد البشرية: تطبيقان لويندوز ورؤية واحدة واضحة لفريقك.",
+    sub: "جهاز تسجيل عند المدخل وتطبيق تسيير في مكتب الموارد البشرية: تطبيقان لويندوز ورؤية واحدة واضحة لفريقك.",
     cta1: "تجربة مجانية", cta2: "شاهد العرض", proof: "مؤسسة تثق بنا",
     kiosk: "تم تسجيل الدخول", employee: "أمين ب.", live: "مباشر",
     dash: "لوحة القيادة", present: "الحاضرون", late: "المتأخرون", absent: "الغائبون", in: "دخول", out: "خروج",
   },
   trust: { employees: "موظف مسيَّر", punches: "تسجيل معالج", satisfaction: "رضا عن الدعم" },
-  demo: { title: "شاهد Attendify أثناء العمل", sub: "عرض فيديو لتطبيق التسيير ومحطة التسجيل.", play: "تشغيل الفيديو" },
+  demo: { title: "شاهد Attendify أثناء العمل", sub: "عرض فيديو لتطبيق التسيير وجهاز التسجيل.", play: "تشغيل الفيديو" },
   how: {
-    title: "ليس مجرد تطبيق، بل منظومة متكاملة", sub: "الموظفون يسجلون عند المحطة والموارد البشرية تتحكم من المكتب.",
-    kioskT: "تطبيق التسجيل", kioskD: "مثبت على لوحة عند الباب. يسجل الموظفون الدخول والخروج ويستقبلون الاستدعاءات.",
-    mgmtT: "تطبيق التسيير", mgmtD: "محطة الموارد البشرية: التسجيلات والغيابات والاستدعاءات والإحصائيات والتقارير والصلاحيات.",
+    title: "ليس مجرد تطبيق، بل منظومة متكاملة", sub: "الموظفون يسجلون عند الجهاز والموارد البشرية تتحكم من المكتب.",
+    kioskT: "تطبيق التسجيل", kioskD: "مثبت على جهاز لوحي عند الباب. يسجل الموظفون الدخول والخروج ويستقبلون الاستدعاءات.",
+    mgmtT: "تطبيق التسيير", mgmtD: "حاسوب مصلحة الموارد البشرية: التسجيلات والغيابات والاستدعاءات والإحصائيات والتقارير والصلاحيات.",
     custT: "حلول مخصصة", custD: "الأجور، والتسجيل في مواقع بعيدة (مصنع في مدينة وإدارة في أخرى)، ووحدات تناسب مؤسستك.",
-    steps: [["ثبّت المحطة", "ثبّت تطبيق التسجيل على لوحة ويندوز."], ["سجّل موظفيك", "أنشئ الملفات والأفواج والأقسام والجداول."], ["تابع مباشرة", "تصل التسجيلات فوراً إلى لوحة القيادة."]],
+    steps: [["ثبّت الجهاز", "ثبّت تطبيق التسجيل على جهاز لوحي بنظام ويندوز."], ["سجّل موظفيك", "أنشئ الملفات والأفواج والأقسام والجداول."], ["تابع مباشرة", "تصل التسجيلات فوراً إلى لوحة القيادة."]],
   },
   features: {
     title: "15 وحدة للتحكم في كل شيء", sub: "صنّف حسب الفئة واكتشف عمل كل وحدة.", all: "الكل", more: "اعرف أكثر", close: "إغلاق",
-    cats: { punch: "التسجيل", people: "الموظفون", calls: "الاستدعاءات والاستبيانات", plan: "الجداول والغيابات", stats: "الإحصائيات والتنبيهات", reports: "التقارير والشارات", admin: "الإدارة والأمان" },
+    cats: { punch: "التسجيل", people: "الموظفون", calls: "الاستدعاءات والاستبيانات", plan: "الجداول والغيابات", stats: "الإحصائيات والتنبيهات", reports: "التقارير وبطاقات الموظفين", admin: "الإدارة والأمان" },
   },
   spot: {
     callsT: "نظام استدعاء يصل فعلاً إلى موظفيك", callsB: ["ترسل الإدارة استدعاء", "يظهر عند التسجيل التالي", "يجيب الموظف على الاستبيانات"],
-    alertsT: "تنبيهات ذكية دون مراقبة يدوية", alertsB: ["اكتشاف تسجيل غير منتظم", "عمل خارج الجدول", "وقت إضافي", "استدعاء مشاهد أو غير مشاهد"],
-    alertCards: [["تسجيل غير منتظم", "خروج دون دخول – ك. مزيان", "danger"], ["خارج الجدول", "عمل يوم السبت – س. حداد", "warning"], ["وقت إضافي", "+1س20 – ن. بلقاسم", "success"], ["استدعاء غير مشاهد", "استدعاء – ر. خليفي", "warning"]],
+    alertsT: "تنبيهات ذكية دون مراقبة يدوية", alertsB: ["اكتشاف تسجيل غير منتظم", "عمل خارج أوقات الدوام", "ساعات إضافية", "استدعاء مشاهد أو غير مشاهد"],
+    alertCards: [["تسجيل غير منتظم", "خروج دون دخول – ك. مزيان", "danger"], ["خارج أوقات الدوام", "عمل يوم السبت – س. حداد", "warning"], ["ساعات إضافية", "+1س20 – ن. بلقاسم", "success"], ["استدعاء غير مشاهد", "استدعاء – ر. خليفي", "warning"]],
     statsT: "إحصائيات واضحة للغيابات", statsB: ["غيابات مبررة وغير مبررة", "تصفية حسب الفوج والقسم والوظيفة", "اختيار حر للموظفين"],
     group: "الفوج", dept: "القسم", func: "الوظيفة", custom: "اختيار حر", just: "مبررة", unjust: "غير مبررة",
   },
   reports: {
-    title: "7 تقارير PDF ومصمم شارات", sub: "صدّر بنقرة، أو ارفع نموذج PDF الخاص بك وضع حقول البيانات حيث تريد بالسحب والإفلات.",
-    list: ["الاستدعاءات", "الاستبيانات", "الغيابات المبررة / غير المبررة", "الساعات الإضافية / الناقصة", "أيام العمل الإضافية", "التأخرات", "تراخيص الدخول والخروج"],
-    tplT: "نموذج PDF الخاص بك", tplD: "ارفع نموذجك وضع كل حقل في المكان الذي تريده.", tplFields: ["الاسم", "القسم", "التاريخ", "التأخرات"], badgeT: "مصمم الشارات", badgeD: "اسحب الحقول إلى الشارة.", fields: ["صورة", "الاسم", "الوظيفة", "الباركود"],
+    title: "7 تقارير PDF ومصمم بطاقات الموظفين", sub: "صدّر بنقرة، أو ارفع نموذج PDF الخاص بك وضع حقول البيانات حيث تريد بالسحب والإفلات.",
+    list: ["الاستدعاءات", "الاستبيانات", "الغيابات المبررة / غير المبررة", "الساعات الإضافية / الناقصة", "أيام العمل الإضافية", "التأخرات", "رخص الدخول والخروج"],
+    tplT: "نموذج PDF الخاص بك", tplD: "ارفع نموذجك وضع كل حقل في المكان الذي تريده.", tplFields: ["الاسم", "القسم", "التاريخ", "التأخرات"], badgeT: "مصمم بطاقات الموظفين", badgeD: "اسحب الحقول إلى البطاقة.", fields: ["صورة", "الاسم", "الوظيفة", "الباركود"],
   },
   security: {
     title: "الأمان والتتبع", sub: "كل إجراء مسجل وكل صلاحية مضبوطة.",
@@ -211,7 +211,7 @@ const ar: Dict = {
   },
   testi: {
     title: "بسّطوا تسيير الحضور",
-    items: [["وفّر لنا Attendify ساعات من الإدخال كل أسبوع.", "نادية ب.", "مسؤولة الموارد البشرية", "Atlas BTP", "صناعة"], ["أصبحت التأخرات مرئية ومبررة بشكل صحيح.", "كريم م.", "مسير", "Medina Retail", "تجارة"], ["الاستدعاءات على المحطة مفيدة جداً للإدارة.", "سامية ح.", "مديرة إدارية", "Wilaya Services", "إدارة"]],
+    items: [["وفّر لنا Attendify ساعات من الإدخال كل أسبوع.", "نادية ب.", "مسؤولة الموارد البشرية", "Atlas BTP", "صناعة"], ["أصبحت التأخرات مرئية ومبررة بشكل صحيح.", "كريم م.", "مسير", "Medina Retail", "تجارة"], ["الاستدعاءات على الجهاز مفيدة جداً للإدارة.", "سامية ح.", "مديرة إدارية", "Wilaya Services", "إدارة"]],
   },
   faq: { title: "الأسئلة الشائعة" },
   blog: {

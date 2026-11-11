@@ -9,6 +9,12 @@ import { faqs } from "@/content/faq";
 import { Hero } from "./Hero";
 import { Icon, Reveal, SectionHeading, Counter, ease } from "./ui";
 
+const mini = {
+  fr: { hr: "RH", yes: "Oui", no: "Non", name: "Nom", msg: "Message", send: "Envoyer" },
+  en: { hr: "HR", yes: "Yes", no: "No", name: "Name", msg: "Message", send: "Send" },
+  ar: { hr: "الموارد البشرية", yes: "نعم", no: "لا", name: "الاسم", msg: "الرسالة", send: "إرسال" },
+};
+
 const sections = ["features", "pricing", "faq", "contact"] as const;
 
 /* The PNG has transparent padding around the mark; crop it so the logo fills its box. */
@@ -222,7 +228,8 @@ function Bars({ values, color }: { values: number[]; color: string }) {
   );
 }
 
-function Spotlights({ d }: { d: Dict }) {
+function Spotlights({ d, lang }: { d: Dict; lang: Lang }) {
+  const m = mini[lang];
   const s = d.spot;
   const Bullets = ({ items }: { items: string[] }) => (
     <ul className="mt-6 space-y-3">{items.map((b) => <li key={b} className="flex gap-3"><Check className="mt-1 shrink-0 text-success" size={18} />{b}</li>)}</ul>
@@ -236,9 +243,9 @@ function Spotlights({ d }: { d: Dict }) {
           <Reveal delay={0.1}>
             <div className="card p-6">
               <div className="rounded-2xl bg-brand-50 p-5">
-                <div className="flex items-center gap-3"><span className="icon-box"><Icon name="BellRing" /></span><div><div className="font-semibold">{s.callsB[0]}</div><div className="text-sm text-ink-600">RH → Amine B.</div></div></div>
+                <div className="flex items-center gap-3"><span className="icon-box"><Icon name="BellRing" /></span><div><div className="font-semibold">{s.callsB[0]}</div><div className="text-sm text-ink-600">{m.hr} → Amine B.</div></div></div>
                 <div className="mt-4 rounded-xl bg-white p-4 text-sm shadow-sm"><div className="font-semibold">{s.callsB[2]}</div>
-                  {["Oui", "Non"].map((o) => <div key={o} className="mt-2 rounded-lg border border-line px-3 py-2">{o}</div>)}
+                  {[m.yes, m.no].map((o) => <div key={o} className="mt-2 rounded-lg border border-line px-3 py-2">{o}</div>)}
                 </div>
               </div>
             </div>
@@ -526,11 +533,11 @@ function Contact({ d, lang }: { d: Dict; lang: Lang }) {
         <Reveal delay={0.1}>
           <form className="card space-y-4 p-6" onSubmit={(e) => e.preventDefault()}>
             {[["name", "text"], ["email", "email"]].map(([n, t]) => (
-              <label key={n} className="block text-sm font-medium">{n === "name" ? "Nom / Name" : c.email}
+              <label key={n} className="block text-sm font-medium">{n === "name" ? mini[lang].name : c.email}
                 <input name={n} type={t} required className="mt-1.5 w-full rounded-md2 border border-line px-4 py-3 outline-none focus:border-brand-500" />
               </label>
             ))}
-            <label className="block text-sm font-medium">Message
+            <label className="block text-sm font-medium">{mini[lang].msg}
               <textarea name="message" rows={4} required className="mt-1.5 w-full rounded-md2 border border-line px-4 py-3 outline-none focus:border-brand-500" />
             </label>
             <input type="text" name="company" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
@@ -576,7 +583,7 @@ export function Landing({ lang, d }: { lang: Lang; d: Dict }) {
         <Trust d={d} />
         <How d={d} />
         <Features d={d} lang={lang} />
-        <Spotlights d={d} />
+        <Spotlights d={d} lang={lang} />
         <Reports d={d} />
         <Security d={d} />
         <Pricing d={d} lang={lang} />
